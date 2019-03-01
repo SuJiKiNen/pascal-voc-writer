@@ -34,6 +34,6 @@ class Writer:
         })
 
     def save(self, annotation_path):
-        with open(annotation_path, 'w') as file:
+        with open(annotation_path, 'w',  encoding="utf-8") as file:
             content = self.annotation_template.render(**self.template_parameters)
             file.write(content)
